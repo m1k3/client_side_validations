@@ -121,6 +121,7 @@ module ClientSideValidations::ActionView::Helpers
 
             end
 
+            validators_array ||= []
             validators_array << validator_hash.clone
             validators_array.last.delete_if { |key, value| key == :if || key == :unless }
             validators_array
